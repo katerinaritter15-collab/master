@@ -4,35 +4,46 @@
  *,*::before,::after{
   box-sizing: inherit;
  }
-  /*font-family: "Inter Tight", sans-serif;
-  font-optical-sizing: auto;
-  font-optical-sizing: auto;
-  font-weight: <weight>; исправь мой код 
-  font-style: normal;
-  */
-/* 1. ОБЩЕЕ */
-/* =========================
-   ОБЩИЕ СТИЛИ
-========================= */
-/* =========================
-   ОБЩИЕ
-========================= */
+ 
+:root {
+  --accent: #e17100;
+  --white: #ffffff;
+  --bg: #1c1d1c;
+  --primary-btn-bg: #f2f0e9;
+  --text: #0f172b;
+  --accent-400: #aa5400;
+  --accent-500: #763800;
+  --accent-200: #ff9e6e;
+  --grau: #dfdddc;
+  --grau-200: #bab4b3;
+}
+:root {
+  --h1-size: 96px;
+  --h2-size: 36px;
+  --h3-size: 30px;
+  --h4-size: 28px;
+  --h5-size: 20px;
+  --pd18-size: 18px;
+  --pg16-size: 16px;
+  --fond-weight-light: 300;
+  --fond-weight-regular: 400;
+  --fond-weight-medium: 500;
+  --fond-weight-bold: 700: --line-height: 48px;
+  --line-height: 30px;
+  --line-height: 28px;
+  --line-height: 20px;
+}
 
 body {
   margin: 0;
-  background-color: #1C1D1C;
+  background-color: var(--bg);
   font-family: "Inter Tight", sans-serif;
   font-weight: 400;
-}
-:root{
-  --acsent-color: #e17100;
-  --white-color: #FFF;
-  --bg-color:#1C1D1C;
 }
 .h1{
   font-family: "Inter Tight", sans-serif;
   font-size: 128px;
-  color: var(--white-color);
+  color: var(--white);
   margin:o;
 }
 .text-h2{
@@ -40,7 +51,7 @@ body {
   font-weight: 300;
   font-size: 36px;
   text-transform: uppercase;
-  color: var(--acsent-color);
+  color: var(--accent);
 }
 .text-h3{
   font-size: 24px;
@@ -102,7 +113,7 @@ body {
   flex-direction: column;
   justify-content: center;
   line-height: 1.1;
-  color: #fff;
+  color: var(--white);
 }
 
 .logo-title {
@@ -130,7 +141,7 @@ body {
   border: none;
   cursor: pointer;
   font-size: 28px;
-  color: white;
+  color: var(--white);
 }
 
 .nav-list {
@@ -145,7 +156,7 @@ body {
 
 .nav-link {
   text-decoration: none;
-  color: #fafcfa;
+  color: var(--white);
   display: flex;
   align-items: center;
   gap: 6px;
@@ -161,7 +172,7 @@ body {
   bottom: -4px;
   width: 0;
   height: 2px;
-  background: var(--acsent-color);
+  background: var(--accent);
   transition: width 0.3s ease;
 }
 
@@ -171,12 +182,12 @@ body {
 
 /* phone */
 .nav-link--phone {
-  color: rgb(223, 128, 3) !important;
+  color: var(--accent) !important;
   font-weight: 500;
 }
 
 .nav-link--phone .material-symbols-outlined {
-  color: rgb(223, 128, 3) !important;
+  color: var(--accent) !important;
 }
 
 /* icons */
@@ -221,7 +232,7 @@ body {
     align-items: center;
     justify-content: center;
 
-    background: #1C1D1C;
+    background: var(--bg);
     padding: 30px 0;
     gap: 20px;
   }
