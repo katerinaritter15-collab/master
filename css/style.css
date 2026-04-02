@@ -65,17 +65,16 @@ p {
   font-size: var(--h2-size);
 }
 
-/* =========================
-   HEADER
-========================= */
-
 .header {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   min-height: 80px;
   padding: 0 24px;
-  z-index: 1000;
+  z-index: 9999;
   position: sticky;
+  top: 0;
+  background: var(--bg);
+  backdrop-filter: blur(10px);
 }
 
 /* =========================
@@ -88,7 +87,7 @@ p {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   flex-wrap: wrap;
   padding: 2rem 3rem;
 }
@@ -109,19 +108,16 @@ p {
 .logo-text {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   line-height: 1.1;
   color: var(--white);
-}
-
-.logo-title {
-  font-weight: 100;
-  font-size: 14px;
 }
 
 .logo-subtitle {
   font-weight: 400;
   font-size: 16px;
+  justify-content: flex-end;
+  line-height: 0.8rem;
 }
 
 /*  Nav */
@@ -151,12 +147,12 @@ p {
   padding: 0;
   font-size: 18px;
 }
-
 .nav-link {
   text-decoration: none;
   color: var(--white);
-  display: flex;
+  display: flex; /* оставь flex */
   align-items: center;
+  justify-content: center; /* если нужно */
   gap: 6px;
   position: relative;
   transition: color 0.3s ease;
@@ -181,7 +177,7 @@ p {
 /* phone */
 .nav-link--phone {
   color: var(--accent) !important;
-  font-weight: 500;
+  font-weight: var(--fond-weight-regular);
 }
 
 .nav-link--phone .material-symbols-outlined {
@@ -191,11 +187,9 @@ p {
 /* icons */
 .material-symbols-outlined {
   color: white;
-}
-
-.nav-link {
-  justify-content: center;
-  display: inline-flex;
+  font-size: 20px;
+  line-height: 1;
+  display: block;
 }
 
 .subtitle-hero {
@@ -216,7 +210,7 @@ p {
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
-  z-index: 1;
+
   justify-content: center;
 }
 .hero::before {
@@ -227,7 +221,7 @@ p {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.9);
-  z-index: 1;
+  z-index: 0;
 }
 
 .conteiner-hero {
@@ -274,7 +268,7 @@ p {
   text-align: center;
   font-family: "Inter Tight";
   font-weight: 400;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   margin: 0 auto;
 }
 /* =========================
@@ -282,6 +276,10 @@ p {
 ========================= */
 
 @media (max-width: 1024px) {
+  .logo {
+    height: 36px;
+    width: 36px;
+  }
   .nav-list {
     gap: 16px;
     font-size: 16px;
@@ -304,6 +302,10 @@ p {
 ========================= */
 
 @media (max-width: 768px) {
+  .logo {
+    height: 30px;
+    width: 30px;
+  }
   .nav-toggle {
     display: block;
   }
